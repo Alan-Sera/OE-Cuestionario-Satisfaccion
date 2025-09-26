@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evalúa tu experiencia - Odontología Especializada Chetumal</title>
+
+  <!-- Meta básicos -->
+  <meta name="description"
+    content="Comparte tu experiencia en Odontología Especializada Chetumal y ayúdanos a mejorar nuestros servicios.">
+  <meta name="keywords" content="dentista Chetumal, ortodoncista, evaluación, reseña, Quintana Roo">
+  <meta name="author" content="Odontología Especializada Chetumal">
+
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="Evaluación de Satisfacción - Odontología Especializada Chetumal">
+  <meta property="og:description" content="Tu opinión nos ayuda a brindar la mejor atención dental en Chetumal">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Evaluación - Odontología Especializada Chetumal">
+  <meta name="twitter:description" content="Comparte tu experiencia dental y ayúdanos a mejorar">
+
+  <!-- Para móviles -->
+  <meta name="theme-color" content="#c8a2c8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Robots (para SEO) -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🦷</text></svg>">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="floating-elements">
+    <div class="floating-tooth" style="top: 10%; left: 10%; animation-delay: 0s;">🦷</div>
+    <div class="floating-tooth" style="top: 20%; right: 15%; animation-delay: 2s;">✨</div>
+    <div class="floating-tooth" style="bottom: 30%; left: 20%; animation-delay: 4s;">😊</div>
+    <div class="floating-tooth" style="bottom: 20%; right: 10%; animation-delay: 1s;">🦷</div>
+    <div class="floating-tooth" style="bottom: 35%; right: 20%; animation-delay: 2s;">🦷</div>
+  </div>
+
+  <div class="form-container">
+    <div id="form-section">
+      <div class="header">
+        <div class="logo-section">
+          <div class="logo-circle">
+            <img class="logo-img" src="Logo OE.jpg" alt="">
+          </div>
+        </div>
+        <h1 class="clinic-name">Odontología Especializada <br>Chetumal</h1>
+        <p class="subtitle">Tu opinión nos ayuda a brindar la mejor atención</p>
+      </div>
+
+      <form id="satisfactionForm">
+        <div class="form-group">
+          <label for="patientName">👤 Nombre del paciente:</label>
+          <input type="text" id="patientName" name="patientName" placeholder="Escribe tu nombre completo" required>
+        </div>
+
+        <div class="form-group">
+          <label for="treatmentDate">📅 Fecha del tratamiento:</label>
+          <div class="date-input-group">
+            <input type="date" id="treatmentDate" name="treatmentDate" required>
+            <button type="button" class="today-btn" onclick="setTodayDate()">
+              📅 Hoy
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="treatmentType">🦷 Tipo de tratamiento recibido:</label>
+          <select id="treatmentType" name="treatmentType" required>
+            <option value="">Selecciona el tratamiento</option>
+            <option value="consulta-inicial">Consulta inicial y diagnóstico</option>
+            <option value="limpieza-dental">Limpieza dental profesional</option>
+            <option value="brackets-metalicos">Brackets metálicos</option>
+            <option value="brackets-esteticos">Brackets estéticos (cerámicos/zafiro)</option>
+            <option value="invisalign">Invisalign / Alineadores transparentes</option>
+            <option value="retenedores">Colocación de retenedores</option>
+            <option value="cirugia-oral">Cirugía oral</option>
+            <option value="resina-estetica">Resinas estéticas</option>
+            <option value="incrustacion-recina">Incrustación de recina estetica</option>
+            <option value="protesis-fija">Protesis fija</option>
+            <option value="protesis-removible">Prótesis removible</option>
+            <option value="extraccion">Extracción dental</option>
+            <option value="ajuste-ortodoncico">Ajuste ortodóncico mensual</option>
+            <option value="blanqueamiento">Blanqueamiento dental</option>
+            <option value="implante">Implante dental</option>
+            <option value="endodoncia">Endodoncia (tratamiento de conducto)</option>
+            <option value="otro">Otro tratamiento</option>
+          </select>
+        </div>
+
+        <div class="rating-section">
+          <h3>⭐ Califica tu experiencia ⭐</h3>
+          <div class="rating-grid">
+            <div class="rating-item">
+              <label>Atención al cliente</label>
+              <div class="stars" data-rating="customerService">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+            </div>
+            <div class="rating-item">
+              <label>Profesionalismo médico</label>
+              <div class="stars" data-rating="professionalism">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+            </div>
+            <div class="rating-item">
+              <label>Instalaciones y equipos</label>
+              <div class="stars" data-rating="facilities">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+            </div>
+            <div class="rating-item">
+              <label>Resultado del tratamiento</label>
+              <div class="stars" data-rating="results">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="recommendation">
+          <label>💙 ¿Recomendarías Odontología Especializada Chetumal? 💙</label>
+          <div class="recommendation-options">
+            <button type="button" class="recommendation-btn" data-value="si">
+              👍 ¡Por supuesto! 👍
+            </button>
+            <button type="button" class="recommendation-btn" data-value="no">
+              👎 No lo haría :(
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">💭 Cuéntanos tu experiencia:</label>
+          <textarea id="comments" name="comments" rows="4"
+            placeholder="Comparte detalles sobre tu visita, sugerencias o cualquier comentario que nos ayude a mejorar..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Enviar Evaluación 🚀
+        </button>
+      </form>
+    </div>
+
+    <div id="thank-you-section" class="hidden">
+      <div class="thank-you">
+        <h2>¡Muchas gracias! 🙏</h2>
+        <p>Tu opinión es invaluable para <span class="chetumal-accent">Odontología Especializada Chetumal</span></p>
+
+        <div class="google-review-section" id="google-section">
+          <h3>🌟 ¡Ayúdanos a seguir creciendo! 🌟</h3>
+          <p>Hemos preparado una reseña basada en tu experiencia. Puedes copiarla y usarla en Google Maps:</p>
+
+          <div class="review-preview" id="reviewPreview">
+            <div class="review-text" id="generatedReview">
+              <!-- La reseña se generará dinámicamente aquí -->
+            </div>
+            <div class="review-actions">
+              <button class="copy-btn" id="copyBtn" onclick="copyReview()">
+                📋 Copiar reseña
+              </button>
+              <span class="copy-success" id="copySuccess">✅ ¡Copiado!</span>
+            </div>
+          </div>
+
+          <div class="google-actions">
+            <button class="google-btn" onclick="redirectToGoogle()">
+              📍 Ir a Google Maps y pegar reseña
+            </button>
+            <button class="manual-btn" onclick="redirectToGoogleManual()">
+              ✍️ Escribir mi propia reseña
+            </button>
+          </div>
+
+          <p style="font-size: 14px; margin-top: 15px; color: #6b7280;">
+            Tu reseña ayuda a otros pacientes a encontrar la mejor atención dental en Chetumal
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
